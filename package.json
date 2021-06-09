@@ -1,9 +1,9 @@
 {
   "name": "jack-form-table",
   "description": "数据驱动的表单式组件",
-  "version": "0.0.7",
+  "version": "0.0.1",
   "license": "MIT",
-  "author": "JackChou",
+  "author": "JackChou https://github.com/jackchoumine/",
   "private": false,
   "scripts": {
     "build:entry": "node build/build-entry.js",
