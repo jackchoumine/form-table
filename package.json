@@ -1,7 +1,7 @@
 {
   "name": "form-table",
   "description": "数据驱动的表单式组件",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "private": false,
   "scripts": {
