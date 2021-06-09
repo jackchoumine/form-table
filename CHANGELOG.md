@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.12](https://github.com/jackchoumine/form-table/compare/v0.0.11...v0.0.12) (2021-06-09)
+
+
+### Bug Fixes
+
+* 添加默认配置 ([b175ba8](https://github.com/jackchoumine/form-table/commit/b175ba84eb9b4c767c23bfa28ee6459de34b260d))
+
 ### [0.0.11](https://github.com/jackchoumine/form-table/compare/v0.0.10...v0.0.11) (2021-06-09)
 
 ### [0.0.10](https://github.com/jackchoumine/form-table/compare/v0.0.7...v0.0.10) (2021-06-09)
