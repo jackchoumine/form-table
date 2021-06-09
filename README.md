@@ -5,7 +5,7 @@
 ## 安装
 
 ```bash
-n i j-form-table
+npm i j-form-table
 ```
 
 在 vue 应用的入口文件中使用：
