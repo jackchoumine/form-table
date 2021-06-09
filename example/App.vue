@@ -2,7 +2,7 @@
  * @Description: 
  * @Date: 2021-06-09 12:14:25 +0800
  * @Author: JackChou
- * @LastEditTime: 2021-06-09 14:22:32 +0800
+ * @LastEditTime: 2021-06-09 14:24:39 +0800
  * @LastEditors: JackChou
 -->
 <template>
@@ -19,7 +19,7 @@ export default {
       data: {
         name: 'LiHei',
         job: 'web dev',
-        slary: '12000',
+        slary: '3000',
         address: '四川省成都市成华区十里店寺庙',
         education: '本科',
         isGood: 1
@@ -27,16 +27,16 @@ export default {
       titleList: [
         { title: '姓名', prop: 'name' },
         {
-          title: '职业',
-          prop: 'job'
-        },
-        {
-          title: '图片',
+          title: '头像',
           // 自定义 title 属性值
           titleTips: data => {
-            return (data.image && '生成图，点击放大') || '暂无生成图'
+            return (data.image && '生成图，点击放大') || '暂无头像'
           },
           prop: 'image'
+        },
+        {
+          title: '职业',
+          prop: 'job'
         },
         {
           title: '月薪',
