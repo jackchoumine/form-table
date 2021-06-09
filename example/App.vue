@@ -2,7 +2,7 @@
  * @Description: 
  * @Date: 2021-06-09 12:14:25 +0800
  * @Author: JackChou
- * @LastEditTime: 2021-06-09 13:31:32 +0800
+ * @LastEditTime: 2021-06-09 14:20:53 +0800
  * @LastEditors: JackChou
 -->
 <template>
@@ -21,11 +21,23 @@ export default {
         job: 'web dev',
         slary: '12000',
         address: '四川省成都市成华区十里店寺庙',
-        education: '本科'
+        education: '本科',
+        isGood: 1
       },
       titleList: [
         { title: '姓名', prop: 'name' },
-        { title: '职业', prop: 'job' },
+        {
+          title: '职业',
+          prop: 'job'
+        },
+        {
+          title: '图片',
+          // 自定义 title
+          titleTips: data => {
+            return (data.image && '生成图，点击放大') || '暂无生成图'
+          },
+          prop: 'image'
+        },
         {
           title: '月薪',
           prop: (h, data) => {
@@ -40,7 +52,16 @@ export default {
         },
         {
           title: '学历',
-          prop: 'education'
+          prop: 'education',
+          span: 1
+        },
+        {
+          title: '是否统招',
+          prop: (h, data) => {
+            const map = { 0: '否', 1: '是' }
+            return <span>{map[data.isGood]}</span>
+          },
+          span: 2
         }
       ]
     }

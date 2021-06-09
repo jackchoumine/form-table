@@ -2,13 +2,15 @@
  * @Description: 表单式表格
  * @Date: 2021-06-09 12:37:04 +0800
  * @Author: JackChou
- * @LastEditTime: 2021-06-09 13:21:12 +0800
+ * @LastEditTime: 2021-06-09 14:15:08 +0800
  * @LastEditors: JackChou
 -->
 <template>
   <div class="j-form-table">
-    <div v-if="title.length" class="j-form-table-title-box">
-      <span class="icon-flag"></span>
+    <div v-if="hasTitleSlot" class="j-form-table-title-box">
+      <slot name="title"></slot>
+    </div>
+    <div v-else-if="title" class="j-form-table-title-box">
       <span class="title-text">{{ title }}</span>
     </div>
     <ul v-if="titleList.length">
@@ -17,7 +19,7 @@
         :key="index"
         :style="{ width: ((item.span || 1) / titleNumPreRow) * 100 + '%' }"
       >
-        <div class="j-form-table-title" :style="`width: ${titleWidth}px;`">
+        <div class="j-form-table-title" :style="`width: ${_titleWidth}px;`">
           <Container
             v-if="typeof item.title === 'function'"
             :renderContainer="item.title"
@@ -31,7 +33,7 @@
           v-title="item.titleTips"
           v-copy="item.enableCopy"
           class="j-form-table-key"
-          :style="`width:calc(100% - ${titleWidth}px);`"
+          :style="`width:calc(100% - ${_titleWidth}px);`"
         >
           <Container
             v-if="typeof item.prop === 'function'"
@@ -61,7 +63,6 @@ export default {
   },
   directives: {
     title: {
-      // NOTE 用不到的参数使用 _ 占位，可避免 vscode 提示没有使用该变量
       inserted(el, bindings, vnode) {
         const { context: that } = vnode
         const { value = false } = bindings
@@ -105,8 +106,7 @@ export default {
       default: ''
     },
     titleWidth: {
-      type: Number,
-      default: 120
+      type: Number
     },
     titleNumPreRow: {
       type: Number,
@@ -124,35 +124,7 @@ export default {
     titleList: {
       type: Array,
       default: () => {
-        return [
-          // NOTE 测试数据
-          /*
-					{ title: '标题1', prop: 'key1' }, //1
-					{ title: '标题2', prop: 'key2' },
-					{ title: '标题ilk', prop: 'key3' }, //7
-					{ title: '标题3', prop: 'key3' },
-					{
-						title: '标题3',
-						prop: (h, data) => {
-							return (
-								<el-button size='mini' type='primary'>
-									按钮
-								</el-button>
-							)
-						},
-						// span: 2,//span: 跨越几个title,默认 1 ,不跨越
-					},
-					{
-						title: function(h, data) {
-							return <span>使用渲染函数自定义标题,{data.key3}</span>
-						},
-						// span: 3,
-						prop: (h, data) => {
-							return <span>使用自定义函数渲染字段内容</span>
-						},
-          },
-          */
-        ]
+        return []
       },
       validator: value => {
         const validate = value.every(item => {
@@ -190,10 +162,15 @@ export default {
         titleInfo[titleInfo.length - 1].span = titleNumPreRow - remainder + 1
       }
       return titleInfo
+    },
+    _titleWidth() {
+      return this.titleWidth
+        ? this.titleWidth
+        : this.$formTableOptions?.titleWidth
+    },
+    hasTitleSlot() {
+      return this.$slots.title
     }
-  },
-  created() {
-    console.log(this.$formTableOptions)
   },
   methods: {
     setTile(el, titleValue) {
