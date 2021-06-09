@@ -1,7 +1,7 @@
 {
   "name": "j-form-table",
   "description": "数据驱动的表单式组件",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "license": "MIT",
   "author": "JackChou https://github.com/jackchoumine/",
   "private": false,
@@ -13,7 +13,7 @@
     "build": "npm run lint && npm run build:entry & npm run build:lib && npm run build:docs",
     "lint": "vue-cli-service --mode production lint lib/*",
     "release": "standard-version",
-    "pub": "npm run build:lib && npm run release &&  npm publish --registry https://registry.npmjs.org && git push --follow-tags origin master && git push  --follow-tags gitee master"
+    "pub": "npm run build:lib && npm run release &&  npm publish --registry https://registry.npmjs.org --acces=public && git push --follow-tags origin master && git push  --follow-tags gitee master"
   },
   "repository": {
     "type": "git",
