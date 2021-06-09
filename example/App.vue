@@ -2,7 +2,7 @@
  * @Description: 
  * @Date: 2021-06-09 12:14:25 +0800
  * @Author: JackChou
- * @LastEditTime: 2021-06-09 14:20:53 +0800
+ * @LastEditTime: 2021-06-09 14:22:32 +0800
  * @LastEditors: JackChou
 -->
 <template>
@@ -32,7 +32,7 @@ export default {
         },
         {
           title: '图片',
-          // 自定义 title
+          // 自定义 title 属性值
           titleTips: data => {
             return (data.image && '生成图，点击放大') || '暂无生成图'
           },
