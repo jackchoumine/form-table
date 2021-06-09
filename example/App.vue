@@ -2,12 +2,18 @@
  * @Description: 
  * @Date: 2021-06-09 12:14:25 +0800
  * @Author: JackChou
- * @LastEditTime: 2021-06-09 14:24:39 +0800
+ * @LastEditTime: 2021-06-09 20:59:36 +0800
  * @LastEditors: JackChou
 -->
 <template>
   <div>
     <FormTable title="使用例子" :data="data" :titleList="titleList" />
+    <FormTable
+      title="使用例子"
+      :data="data"
+      :titleList="titleList"
+      :titleWidth="150"
+    />
   </div>
 </template>
 
