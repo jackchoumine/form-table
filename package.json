@@ -1,8 +1,9 @@
 {
-  "name": "form-table",
+  "name": "@jack/form-table",
   "description": "数据驱动的表单式组件",
   "version": "0.0.5",
   "license": "MIT",
+  "author": "JackChou",
   "private": false,
   "scripts": {
     "build:entry": "node build/build-entry.js",
@@ -17,6 +18,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jackchoumine/form-table.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "main": "dist/form-table.umd.min.js",
   "keywords": [

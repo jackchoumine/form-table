@@ -2,7 +2,7 @@
  * @Description: 表单式表格
  * @Date: 2021-06-09 12:37:04 +0800
  * @Author: JackChou
- * @LastEditTime: 2021-06-09 14:15:08 +0800
+ * @LastEditTime: 2021-06-09 18:43:46 +0800
  * @LastEditors: JackChou
 -->
 <template>
@@ -56,6 +56,7 @@
 <script>
 import Container from './container.js'
 import { copyText } from './utils/index.js'
+import clone from 'clone'
 export default {
   name: 'FormTable',
   components: {
@@ -148,7 +149,7 @@ export default {
     titleInfo() {
       // NOTE 使用 JSON.stringify 深度复制丢失方法,此处勿用
       // const titleInfo = JSON.parse(JSON.stringify(this.titleList))
-      const titleInfo = this.titleList
+      const titleInfo = clone(this.titleList)
       if (titleInfo.some(item => !!item.span)) {
         // NOTE 如何用户有设置每个标题的宽度,就不适配最后一个
         return titleInfo
