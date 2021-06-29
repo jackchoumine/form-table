@@ -52,7 +52,7 @@ Vue.use(FormTable, { titleWidth: 150 })
         data: {
           name: 'LiHei',
           job: 'web dev',
-          slary: '3000',
+          salary: '3000',
           address: '四川省成都市成华区十里店寺庙',
           education: '本科',
           isGood: 1
@@ -74,7 +74,7 @@ Vue.use(FormTable, { titleWidth: 150 })
           {
             title: '月薪',
             prop: (h, data) => {
-              return <span>{data.slary + '$'}</span>
+              return <span>{data.salary + '$'}</span>
             },
             enableCopy: true // 开启点击赋值内容
           },
@@ -105,4 +105,4 @@ Vue.use(FormTable, { titleWidth: 150 })
 
 效果
 
-![上述渲染效果](./public/WX20210609-211945@2x.png)
+![上述渲染效果](https://tva1.sinaimg.cn/large/008i3skNgy1grzhbhwtnrj31k00ksacj.jpg)
