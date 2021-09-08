@@ -1,0 +1,13 @@
+build/
+docs/
+example/
+lib/
+public/
+.cz-config.js
+.eslintrc.js
+babel.config.js
+commitlint.config.js
+jsconfig.json
+postcss.config.js
+prettier.config.js
+vue.config.js

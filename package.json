@@ -1,8 +1,12 @@
 {
   "name": "j-form-table",
-  "description": "数据驱动的表单式组件",
   "version": "0.0.16",
+  "main": "dist/form-table.umd.min.js",
+  "files": [
+    "dist"
+  ],
   "license": "MIT",
+  "description": "数据驱动的表单式组件",
   "author": "JackChou https://github.com/jackchoumine/",
   "private": false,
   "scripts": {
@@ -22,7 +26,6 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "main": "dist/form-table.umd.min.js",
   "keywords": [
     "table",
     "form-table",
