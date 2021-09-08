@@ -2,8 +2,8 @@
  * @Description: 
  * @Date: 2021-06-09 12:14:25 +0800
  * @Author: JackChou
- * @LastEditTime: 2021-06-09 20:59:36 +0800
- * @LastEditors: JackChou
+ * @LastEditTime: 2021-09-08 19:40:55 +0800
+ * @LastEditors : JackChou
 -->
 <template>
   <div>
@@ -18,12 +18,15 @@
 </template>
 
 <script>
+const img =
+  'https://tva1.sinaimg.cn/large/008i3skNgy1gu9gco1hdbj605k05kgll02.jpg'
 export default {
   name: 'App',
   data() {
     return {
       data: {
         name: 'LiHei',
+        image: img,
         job: 'web dev',
         slary: '3000',
         address: '四川省成都市成华区十里店寺庙',
@@ -38,7 +41,13 @@ export default {
           titleTips: data => {
             return (data.image && '生成图，点击放大') || '暂无头像'
           },
-          prop: 'image'
+          prop: (h, data) => {
+            return (
+              <div style={{ width: '50px', height: '200px' }}>
+                <img src={data.image} alt='我的头像：超级无敌美丽' />
+              </div>
+            )
+          }
         },
         {
           title: '职业',
@@ -54,6 +63,7 @@ export default {
         {
           title: '住址',
           prop: 'address',
+          enableCopy: true,
           span: 2
         },
         {
