@@ -1,6 +1,6 @@
 {
   "name": "j-form-table",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "main": "dist/form-table.umd.min.js",
   "files": [
     "dist"

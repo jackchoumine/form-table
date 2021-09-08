@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.17](https://github.com/jackchoumine/form-table/compare/v0.0.15...v0.0.17) (2021-09-08)
+
+
+### Bug Fixes
+
+* 修复标题宽度不生效 ([7a08d22](https://github.com/jackchoumine/form-table/commit/7a08d22229478b22605ef9d3f0ce38a468e74792))
+* 修改文字 ([9656705](https://github.com/jackchoumine/form-table/commit/965670573331f9b9bddf89e20b9c005905a4b297))
+
 ### [0.0.15](https://github.com/jackchoumine/form-table/compare/v0.0.14...v0.0.15) (2021-06-09)
 
 ### [0.0.14](https://github.com/jackchoumine/form-table/compare/v0.0.13...v0.0.14) (2021-06-09)
