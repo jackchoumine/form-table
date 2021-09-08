@@ -45,14 +45,17 @@ Vue.use(FormTable, { titleWidth: 150 })
 </template>
 
 <script>
+  const img =
+    'https://tva1.sinaimg.cn/large/008i3skNgy1gu9gco1hdbj605k05kgll02.jpg'
   export default {
     name: 'App',
     data() {
       return {
         data: {
           name: 'LiHei',
+          image: img,
           job: 'web dev',
-          salary: '3000',
+          slary: '3000',
           address: '四川省成都市成华区十里店寺庙',
           education: '本科',
           isGood: 1
@@ -65,7 +68,13 @@ Vue.use(FormTable, { titleWidth: 150 })
             titleTips: data => {
               return (data.image && '生成图，点击放大') || '暂无头像'
             },
-            prop: 'image'
+            prop: (h, data) => {
+              return (
+                <div style={{ width: '50px', height: '200px' }}>
+                  <img src={data.image} alt='我的头像：超级无敌美丽' />
+                </div>
+              )
+            }
           },
           {
             title: '职业',
@@ -74,13 +83,14 @@ Vue.use(FormTable, { titleWidth: 150 })
           {
             title: '月薪',
             prop: (h, data) => {
-              return <span>{data.salary + '$'}</span>
+              return <span>{data.slary + '$'}</span>
             },
             enableCopy: true // 开启点击赋值内容
           },
           {
             title: '住址',
             prop: 'address',
+            enableCopy: true,
             span: 2
           },
           {
@@ -105,4 +115,4 @@ Vue.use(FormTable, { titleWidth: 150 })
 
 效果
 
-![上述渲染效果](https://tva1.sinaimg.cn/large/008i3skNgy1grzhbhwtnrj31k00ksacj.jpg)
+![上述渲染效果](https://tva1.sinaimg.cn/large/008i3skNgy1gu9i87hguhj61da0j70u702.jpg)
