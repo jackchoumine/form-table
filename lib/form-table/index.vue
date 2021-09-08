@@ -2,8 +2,8 @@
  * @Description: 表单式表格
  * @Date: 2021-06-09 12:37:04 +0800
  * @Author: JackChou
- * @LastEditTime: 2021-06-09 18:43:46 +0800
- * @LastEditors: JackChou
+ * @LastEditTime: 2021-09-08 20:36:06 +0800
+ * @LastEditors : JackChou
 -->
 <template>
   <div class="j-form-table">
@@ -107,7 +107,8 @@ export default {
       default: ''
     },
     titleWidth: {
-      type: Number
+      type: Number,
+      default: 120
     },
     titleNumPreRow: {
       type: Number,
