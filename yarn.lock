@@ -6228,6 +6228,13 @@
   "resolved" "https://registry.npm.taobao.org/isstream/download/isstream-0.1.2.tgz"
   "version" "0.1.2"
 
+"j-form-table@file:":
+  "resolved" "file:"
+  "version" "0.0.17"
+  dependencies:
+    "clone" "^2.1.2"
+    "j-form-table" "file:"
+
 "javascript-stringify@^2.0.1":
   "integrity" "sha1-J8dlOb4U2L0Sghmi1zGwkzeQTnk="
   "resolved" "https://registry.npm.taobao.org/javascript-stringify/download/javascript-stringify-2.1.0.tgz"
