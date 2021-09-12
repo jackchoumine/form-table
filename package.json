@@ -3,7 +3,7 @@
   "version": "0.0.17",
   "main": "dist/form-table.umd.min.js",
   "files": [
-    "dist"
+    "dist/"
   ],
   "license": "MIT",
   "description": "数据驱动的表单式组件",
